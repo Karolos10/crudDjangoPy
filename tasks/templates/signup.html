@@ -1,9 +1,15 @@
 
 <h1>Hello Word, How are you</h1>
 
-<form>
-    {{ form.as_p}}
+<form action="/signup/" method="POST">
 
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button>
+        Sign Up
+    </button>
 
     
 </form>
